@@ -1,0 +1,34 @@
+var history = [
+  [4,2],
+  [9,0],
+  [10,0],
+  [0,0],
+  [0,10],
+  [0,8],
+  [4,2],
+  [9,0],
+  [10,0],
+  [0,3],
+  [0,10],
+  [10,0],
+  [1,0]
+];
+
+var pointsHistory = []
+var total = 0;
+
+for(var i = 0; i<=12; i++){
+  var round = history[i]
+  var roundTotal = round[1] + round[0];
+  if(roundTotal = 10){
+    if(round[0] === 10){
+      console.log('Es strike', round)
+    }else {
+      console.log('Es semistrike', round)
+    }
+  } else {
+    total += roundTotal;
+  }
+}
+
+console.log({total})
